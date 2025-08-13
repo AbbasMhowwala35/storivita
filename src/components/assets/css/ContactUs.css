@@ -1,0 +1,51 @@
+.contact-page {
+    background-color: #fff;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.office-card {
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-card {
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.btn-red {
+    background-color: #f54f47;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.btn-red:hover {
+    background-color: #e63e36;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.footer-links li:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+    .form-card {
+        margin: 20px 0;
+    }
+}

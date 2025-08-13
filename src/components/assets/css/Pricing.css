@@ -1,0 +1,92 @@
+.pricing-tabs-nav .pricing-tab {
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-right: 8px;
+    padding: 8px 16px;
+}
+
+.pricing-tabs-nav .pricing-tab.disabled {
+    background: #e0e0e0 !important;
+    color: #999 !important;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.pricing-tab.active {
+    background-color: #ff4d4d !important;
+    color: #fff !important;
+}
+
+.download-section {
+    background-color: #eaf5ff;
+}
+
+.card {
+    border-radius: 12px;
+}
+
+.pricing-content h4 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.pricing-content p {
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.pricing-tab {
+    margin-left: 0 !important;
+}
+
+.pricing-card {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pricing-card span {
+    font-size: 9px;
+    color: #000;
+}
+
+.price p {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #000;
+}
+
+.short-content h6,
+.short-content ul li {
+    color: #000;
+    font-size: 16px;
+}
+
+@media (max-width: 991px) {
+    .pricing-tabs-nav.nav.nav-pills {
+        display: flex;
+        align-items: center;
+        overflow-y: scroll;
+        flex-wrap: unset;
+    }
+    .tab-content .row {
+        display: flex;
+        align-items: center;
+        overflow-y: scroll;
+        flex-wrap: unset;
+    }
+}

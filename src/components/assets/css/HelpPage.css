@@ -1,0 +1,84 @@
+.help-page {
+    color: #333;
+}
+
+.contact-section {
+    margin-bottom: 50px;
+}
+
+.contact-bg-section h4{
+    font-weight: 700;
+}
+
+.hero-title {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.hero-text {
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+}
+
+.hero-img {
+    max-width: 100%;
+}
+
+.faq-section .faq-item {
+    padding-bottom: 1rem;
+}
+
+.faq-section h5 {
+    font-weight: 600;
+}
+
+.contact-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.contact-card h5 {
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.btn-red {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.btn-red:hover {
+    background-color: #d7372c;
+}
+
+.footer {
+    background-color: #fafafa;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+
+.contact-bg-section {
+    background-color: #F0F8FF;
+    padding: 60px;
+    text-align: center;
+}
+
+.faq-q {
+    font-weight: 600;
+    font-weight: 18px;
+    line-height: 22px;
+}

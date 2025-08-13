@@ -1,0 +1,155 @@
+.hero-section {
+    margin-bottom: 50px;
+}
+
+.hero-section h1 {
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45px;
+    color: #000;
+}
+
+.hero-section p {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 30px 0;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 250px;
+}
+
+.bg-section {
+    background-image: url('../images/bg-section.png');
+    padding: 50px;
+    background-size: cover;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.bg-section h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.how-it-works {
+    padding: 3rem 0;
+    background-color: #fff;
+    position: relative;
+}
+
+.step-col {
+    display: flex; 
+    margin-bottom: 50px;
+}
+
+.step-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: left;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+}
+
+.step-icon {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.step-card h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.step-card p {
+    font-size: 13px;
+    color: #444;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    right: -35px;
+    transform: translateY(-50%);
+}
+
+.arrow img {
+    width: 101px;
+}
+
+.arrow-col {
+    max-height: 40px;
+    margin-top: -20px;
+}
+
+@media (max-width: 991px) {
+    .arrow {
+        display: none;
+    }
+
+    .hero-section h1 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .hero-section p {
+        margin: 10px 0;
+    }
+
+    .bg-section h3 {
+        font-size: 20px;
+    }
+
+    .arrow-col {
+        margin-top: 20px;
+        margin-bottom: 70px;
+        transform: rotate(90deg);
+    }
+
+    .step-card {
+        width: 230px !important;
+        margin: 0 auto;
+    }
+
+    .blue-bg-section h3 {
+        font-size: 24px !important;
+    }
+}
+
+.blue-bg-section {
+    background-color: #F0F8FF;
+    padding: 70px;
+    color: #000;
+    text-align: center;
+}
+
+.blue-bg-section h3 {
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.blue-bg-section p {
+    font-size: 18px;
+    color: #000;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links li {
+    font-size: 16px;
+    line-height: 30px;
+}

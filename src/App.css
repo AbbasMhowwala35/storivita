@@ -1,38 +1,191 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+    min-height: 100vh;
+    padding: 50px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.custom-navbar {
+    background-color: white;
+    padding: 0.8rem 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar-logo {
+    display: flex;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-logo img {
+    margin-right: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.brand-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-link {
+    color: #000 !important;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.active-link {
+    color: red !important;
+}
+
+.custom-footer {
+    background-color: #050A29;
+    color: white;
+    padding: 2rem;
+}
+
+.custom-footer h5 {
+    font-size: 1.2rem;
+}
+
+.custom-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.custom-footer ul li {
+    margin-bottom: 5px;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+.active {
+    color: #F5564E !important;
+}
+
+.theme-primary-filled {
+    background-color: #F5564E;
+    border-color: #F5564E;
+    min-width: 200px;
+    min-height: 50px;
+    border-radius: 5px;
+}
+
+.theme-primary-filled:hover {
+    background-color: #fff;
+    color: #F5564E;
+    border-color: #F5564E;
+}
+
+.theme-primary-white {
+    background-color: #fff;
+    border-color: #ccc;
+    color: #000;
+    min-width: 200px;
+    min-height: 50px;
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.theme-primary-white:hover {
+    background-color: #fff;
+    color: #F5564E;
+    border-color: #F5564E;
+}
+
+.play-store-button {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    height: 35px;
+    width: 35px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.gplay {
+    width: 16px;
+}
+
+.footer-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.about-page h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-page p {
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.milestone-table tr td {
+    border: none;
+}
+
+.milestone-table thead tr td {
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.milestone-table tbody tr td {
+    padding-bottom: 30px;
+}
+
+.build-box {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    min-height: 330px;
+}
+
+.build-box h3 {
+    margin-top: 50px;
+}
+
+.build-box-content {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    max-width: 750px;
+    padding: 20px;
+    margin-top: -200px !important;
+    margin: 0 auto;
+}
+
+.text-orange {
+    color: #F5564E;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 991px) {
+    .footer-link {
+        align-items: flex-end;
+    }
+
+    .build-box {
+        margin: 20px 0;
+    }
 }
