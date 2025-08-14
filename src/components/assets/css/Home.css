@@ -1,3 +1,7 @@
+.home-page {
+    background: #FCFCFC;
+}
+
 .hero-section {
     margin-bottom: 50px;
 }
@@ -55,9 +59,17 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     flex-direction: column;
     height: 100%;
+}
+
+.img {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .step-icon {
@@ -74,6 +86,7 @@
 .step-card p {
     font-size: 13px;
     color: #444;
+    flex-grow: 1;
 }
 
 .arrow {
@@ -121,7 +134,7 @@
         margin: 0 auto;
     }
 
-    .blue-bg-section h3 {
+    .text-blue-bg {
         font-size: 24px !important;
     }
 }
@@ -133,7 +146,7 @@
     text-align: center;
 }
 
-.blue-bg-section h3 {
+.text-blue-bg {
     font-size: 28px;
     color: #000;
     margin-bottom: 30px;

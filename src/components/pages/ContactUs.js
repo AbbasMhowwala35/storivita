@@ -180,7 +180,7 @@ const ContactUs = () => {
                                     name="name"
                                     value={form.name}
                                     onChange={handleChange}
-                                    className={`mb-3 ${errors.name ? "is-invalid" : ""}`}
+                                    className={`${errors.name ? "is-invalid" : ""}`}
                                     placeholder="Full Name"
                                 />
                                 {errors.name && <div className="text-danger mb-2">{errors.name}</div>}
@@ -189,7 +189,7 @@ const ContactUs = () => {
                                     name="subject"
                                     value={form.subject}
                                     onChange={handleChange}
-                                    className={`mb-3 ${errors.subject ? "is-invalid" : ""}`}
+                                    className={`${errors.subject ? "is-invalid" : ""}`}
                                     placeholder="Subject"
                                 />
                                 {errors.subject && <div className="text-danger mb-2">{errors.subject}</div>}
@@ -198,7 +198,7 @@ const ContactUs = () => {
                                     name="email"
                                     value={form.email}
                                     onChange={handleChange}
-                                    className={`mb-3 ${errors.email ? "is-invalid" : ""}`}
+                                    className={`${errors.email ? "is-invalid" : ""}`}
                                     placeholder="Your Email ID"
                                 />
                                 {errors.email && <div className="text-danger mb-2">{errors.email}</div>}
@@ -207,7 +207,7 @@ const ContactUs = () => {
                                     name="mobile"
                                     value={form.mobile}
                                     onChange={handleChange}
-                                    className={`mb-3 ${errors.mobile ? "is-invalid" : ""}`}
+                                    className={`${errors.mobile ? "is-invalid" : ""}`}
                                     placeholder="Mobile"
                                 />
                                 {errors.mobile && <div className="text-danger mb-2">{errors.mobile}</div>}
@@ -218,7 +218,7 @@ const ContactUs = () => {
                                     onChange={handleChange}
                                     as="textarea"
                                     rows={4}
-                                    className={`mb-3 ${errors.message ? "is-invalid" : ""}`}
+                                    className={`${errors.message ? "is-invalid" : ""}`}
                                     placeholder="Write Here Your Message"
                                 />
                                 {errors.message && <div className="text-danger mb-2">{errors.message}</div>}

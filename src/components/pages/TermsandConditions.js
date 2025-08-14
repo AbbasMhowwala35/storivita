@@ -1763,8 +1763,8 @@ const TermsandConditions = () => {
                             <address>
                                 NAUMS Private Limited<br />
                                 353, Opp. Nasia Kunj, Ajmeer, Rajasthan 305001, India<br />
-                                Email: supprot@storivita.com<br />
-                                Phone: +91 9939098620
+                                Email: <a href='mailto:support@storivita.com'>support@storivita.com</a><br />
+                                Phone: <a href='tel:+91 9939098620'>+91 9939098620</a>
                             </address>
                             <p>
                                 NAUMS designates this contact information and email as the primary means for all user communications, legal notices, and official correspondence relating to the STORIVITA platform and Services.

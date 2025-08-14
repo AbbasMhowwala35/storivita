@@ -12,7 +12,7 @@ const AboutUs = () => {
         <div className="about-page">
             <Container>
                 {/* Who We Are */}
-                <Row className="align-items-center mb-5">
+                <Row className="align-items-center about-us-section">
                     <Col xs={12} md={6} className="order-1 order-md-2">
                         <img
                             src={a1}
@@ -40,7 +40,7 @@ const AboutUs = () => {
                     </Col>
                 </Row>
                 {/* Current Focus */}
-                <Row className="align-items-center mb-5">
+                <Row className="align-items-center about-us-section">
                     <Col md={6}>
                         <img
                             src={a2}
@@ -62,8 +62,8 @@ const AboutUs = () => {
                     </Col>
                 </Row>
                 {/* Our Vision */}
-                <Row className="align-items-center mb-5">
-                    <Col xs={12} md={6} className="order-1 order-md-2 mb-5">
+                <Row className="align-items-center about-us-section">
+                    <Col xs={12} md={6} className="order-1 order-md-2 ">
                         <img
                             src={a3}
                             alt="Our Vision"
@@ -91,8 +91,8 @@ const AboutUs = () => {
                     </Col>
                 </Row>
                 {/* Our Journey */}
-                <Row className="align-items-center mb-5">
-                    <Col md={6} className='mb-5'>
+                <Row className="align-items-center about-us-section">
+                    <Col md={6} className=''>
                         <img
                             src={a4}
                             alt="Our Journey"
@@ -128,8 +128,8 @@ const AboutUs = () => {
                     </Col>
                 </Row>
                 {/* Why Choose */}
-                <Row className="align-items-center mb-5">
-                    <Col xs={12} md={6} className="order-1 order-md-2 mb-5">
+                <Row className="align-items-center about-us-section">
+                    <Col xs={12} md={6} className="order-1 order-md-2 ">
                         <img
                             src={a5}
                             alt="App Preview"
@@ -178,7 +178,7 @@ const AboutUs = () => {
                         <Button variant="danger" className="mt-3">Download Now</Button> */}
                     </Col>
                 </Row>
-                <Row className="text-center build-box-content justify-content-center mb-5">
+                <Row className="text-center build-box-content justify-content-center ">
                     <Col>
                         <p>
                             In today's fast-changing world, many local businesses are struggling to survive due to lack of digital exposure, rising online competition, and shifting customer habits.

@@ -6,7 +6,9 @@ body {
 
 main {
     min-height: 100vh;
-    padding: 50px 0;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    background-color: #fcfcfc;
 }
 
 .custom-navbar {
@@ -129,6 +131,10 @@ main {
     text-decoration: none;
 }
 
+.about-us-section {
+    margin: 70px 0;
+}
+
 .about-page h4 {
     font-size: 24px;
     margin-bottom: 20px;
@@ -190,7 +196,8 @@ main {
     }
 
     main {
-        padding: 30px 0;
+        padding-top: 100px;
+        padding-bottom: 0;
     }
 
     .navbar-logo svg {
@@ -209,5 +216,26 @@ main {
     .navbar-toggler:focus {
         box-shadow: none;
         border: none;
+    }
+
+    .custom-collapse {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: white;
+        padding-top: 70px;
+        z-index: 1050;
+        overflow-y: auto; 
+    }
+
+    .custom-collapse .nav-link {
+        font-size: 1.25rem;
+        padding: 1rem;
+    }
+
+    .about-page .col-md-6 img {
+        margin-bottom: 20px;
     }
 }

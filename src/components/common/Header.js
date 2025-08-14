@@ -8,7 +8,7 @@ const Header = () => {
         setExpanded(false);
     }
     return (
-        <Navbar expand="lg" className="custom-navbar shadow-sm" expanded={expanded}>
+        <Navbar expand="lg" fixed="top"  className="custom-navbar shadow-sm" expanded={expanded}>
             <Container>
                 <Navbar.Brand href="/" className="navbar-logo gap-3 d-flex align-items-center">
                     <svg width="59" height="58" viewBox="0 0 59 58" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +36,7 @@ const Header = () => {
                     aria-controls="basic-navbar-nav"
                     onClick={() => setExpanded(expanded ? false : true)}
                 />
-                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end custom-collapse">
                     <Nav className="gap-3">
                         <Nav.Link as={NavLink} onClick={handleNavClick} to="/" end className={({ isActive }) => isActive ? "active-link" : ""}>Home</Nav.Link>
                         <Nav.Link as={NavLink} onClick={handleNavClick} to="/about" className={({ isActive }) => isActive ? "active-link" : ""}>About Us</Nav.Link>

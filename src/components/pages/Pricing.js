@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Tab, Nav } from 'react-bootstrap';
+import { Container, Row, Col, Tab, Nav, Button } from 'react-bootstrap';
 import p1 from '../assets/images/p1.svg'
 import pc1 from '../assets/images/pc1.svg'
 import pc2 from '../assets/images/pc2.svg'
 import pc3 from '../assets/images/pc3.svg'
-import Download from '../common/Download';
+import gplay from '../assets/images/google-play.svg'
+
 import '../assets/css/Pricing.css';
 
 export default function Pricing() {
@@ -160,7 +161,19 @@ export default function Pricing() {
                         </Col>
                     </Row>
                 </Container>
-                <Download />
+                <Container fluid className="blue-bg-section text-black mt-5">
+                    <Container><Row className="align-items-center text-center">
+                        <h3>Download the app and get started!</h3>
+                        <div className="buttons mt-3">
+                            <div className='d-flex justify-content-center gap-3 align-items-center'>
+                                <Button className="theme-primary-filled">Download Now</Button>
+                                <Button className="play-store-button">
+                                    <img src={gplay} className='gplay' />
+                                </Button>
+                            </div>
+                        </div>
+                    </Row></Container>
+                </Container>
             </div>
         </>
     );

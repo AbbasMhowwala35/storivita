@@ -92,7 +92,9 @@ const Home = () => {
                         <React.Fragment key={index}>
                             <Col md={2} sm={6} className="step-col d-flex">
                                 <div className={`step-card ${!isMobile ? 'flex-grow-1' : ''}`}>
-                                    <img src={step.icon} alt={step.title} className="step-icon" />
+                                    <div className='img'>
+                                        <img src={step.icon} alt={step.title} className="step-icon" />
+                                    </div>
                                     <h5>{step.title}</h5>
                                     <p>{step.text}</p>
                                 </div>
@@ -110,7 +112,7 @@ const Home = () => {
                 <Container>
                     <Row>
                         <Col md={12}>
-                            <h3>Your Business, One Platform – Local to Limitless</h3>
+                            <h3 className='text-blue-bg'>Your Business, One Platform – Local to Limitless</h3>
                             <p>
                                 At Storivita, we are building a unified digital platform to help local
                                 businesses take charge of their digital presence. Our goal is simple — to
