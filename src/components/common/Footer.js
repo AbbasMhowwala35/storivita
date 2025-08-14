@@ -23,7 +23,7 @@ const Footer = () => {
           </Col>
           <Col xs={7} md={6} className="footer-right text-center text-md-end d-block d-md-none">
             <p>
-              <a href="/help-page">Legal</a> • <a href="/terms-and-conditions">Privacy Security</a>
+              <a href="/terms-and-conditions"><span>Legal •</span> Privacy Security</a>
             </p>
           </Col>
         </Row>
@@ -35,7 +35,7 @@ const Footer = () => {
           </Col>
           <Col xs={12} md={6} className="footer-right text-center text-md-end d-none d-md-block">
             <p>
-              <a href="/help-page">Legal</a> • <a href="/terms-and-conditions">Privacy Security</a>
+              <a href="/terms-and-conditions"><span>Legal •</span> Privacy Security</a>
             </p>
           </Col>
         </Row>

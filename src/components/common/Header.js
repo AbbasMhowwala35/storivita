@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {
+    const [expanded, setExpanded] = useState(false);
+    const handleNavClick = () => {
+        setExpanded(false);
+    }
     return (
-        <Navbar expand="lg" className="custom-navbar shadow-sm">
+        <Navbar expand="lg" className="custom-navbar shadow-sm" expanded={expanded}>
             <Container>
                 <Navbar.Brand href="/" className="navbar-logo gap-3 d-flex align-items-center">
                     <svg width="59" height="58" viewBox="0 0 59 58" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,13 +32,17 @@ const Header = () => {
                     </svg>
                     <span className="brand-text"><b>Storivita</b></span>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle
+                    aria-controls="basic-navbar-nav"
+                    onClick={() => setExpanded(expanded ? false : true)}
+                />
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                     <Nav className="gap-3">
-                        <Nav.Link as={NavLink} to="/" end className={({ isActive }) => isActive ? "active-link" : ""}>Home</Nav.Link>
-                        <Nav.Link as={NavLink} to="/about" className={({ isActive }) => isActive ? "active-link" : ""}>About Us</Nav.Link>
-                        <Nav.Link as={NavLink} to="/pricing" className={({ isActive }) => isActive ? "active-link" : ""}>Pricing</Nav.Link>
-                        <Nav.Link as={NavLink} to="/contact" className={({ isActive }) => isActive ? "active-link" : ""}>Contact Us</Nav.Link>
+                        <Nav.Link as={NavLink} onClick={handleNavClick} to="/" end className={({ isActive }) => isActive ? "active-link" : ""}>Home</Nav.Link>
+                        <Nav.Link as={NavLink} onClick={handleNavClick} to="/about" className={({ isActive }) => isActive ? "active-link" : ""}>About Us</Nav.Link>
+                        <Nav.Link as={NavLink} onClick={handleNavClick} to="/pricing" className={({ isActive }) => isActive ? "active-link" : ""}>Pricing</Nav.Link>
+                        <Nav.Link as={NavLink} onClick={handleNavClick} to="/help-page" className={({ isActive }) => isActive ? "active-link" : ""}>Help</Nav.Link>
+                        <Nav.Link as={NavLink} onClick={handleNavClick} to="/contact" className={({ isActive }) => isActive ? "active-link" : ""}>Contact Us</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

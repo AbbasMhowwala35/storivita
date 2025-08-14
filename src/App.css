@@ -188,4 +188,26 @@ main {
     .build-box {
         margin: 20px 0;
     }
+
+    main {
+        padding: 30px 0;
+    }
+
+    .navbar-logo svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    span.brand-text {
+        font-size: 17px;
+    }
+
+    button.navbar-toggler.collapsed {
+        border: none;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+        border: none;
+    }
 }

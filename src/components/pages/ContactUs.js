@@ -128,9 +128,20 @@ const ContactUs = () => {
                         <Card className="office-card shadow-sm">
                             <Card.Body>
                                 <h6 className="fw-bold">Rajasthan (Head Office)</h6>
-                                <p className="mb-1">A-6, Chatai Ganj, Ajmer, 306001, Rajasthan</p>
-                                <p className="mb-1">+91 9930986260, 7992260293</p>
-                                <p className="mb-0">Support@storivita.com</p>
+                                <p className="mb-1">412/19, Chatai Ganj, Ajmer, Rajasthan 305001</p>
+                                <p className="mb-1">
+                                    <a href="tel:+919930986260" className="text-decoration-none text-black">
+                                        +91 9930986260
+                                    </a>,{" "}
+                                    <a href="tel:+917992260293" className="text-decoration-none text-black">
+                                        7992260293
+                                    </a>
+                                </p>
+                                <p className="mb-0">
+                                    <a href="mailto:Support@storivita.com" className="text-decoration-none text-black">
+                                        Support@storivita.com
+                                    </a>
+                                </p>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -139,8 +150,20 @@ const ContactUs = () => {
                             <Card.Body>
                                 <h6 className="fw-bold">New Delhi (Office)</h6>
                                 <p className="mb-1">A-4, A-Block Raipur Khurd, Chattarpur, 110068, New Delhi</p>
-                                <p className="mb-1">+91 9930986260, 7992260293</p>
-                                <p className="mb-0">Support@storivita.com</p>
+                                <p className="mb-1">
+                                    <a href="tel:+919930986260" className="text-decoration-none text-black">
+                                        +91 9930986260
+                                    </a>,{" "}
+                                    <a href="tel:+917992260293" className="text-decoration-none text-black">
+                                        7992260293
+                                    </a>
+                                </p>
+                                <p className="mb-0">
+                                    <a href="mailto:Support@storivita.com" className="text-decoration-none text-black">
+                                        Support@storivita.com
+                                    </a>
+                                </p>
+
                             </Card.Body>
                         </Card>
                     </Col>

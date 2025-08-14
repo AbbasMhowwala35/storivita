@@ -20,7 +20,7 @@
     opacity: 0.7;
 }
 
-.pricing-tab.active {
+.pricing-tabs-nav .pricing-tab.active {
     background-color: #ff4d4d !important;
     color: #fff !important;
 }
@@ -88,5 +88,10 @@
         align-items: center;
         overflow-y: scroll;
         flex-wrap: unset;
+    }
+
+    .pricing-card {
+        box-shadow: none;
+        border: 1px solid #ccc;
     }
 }
