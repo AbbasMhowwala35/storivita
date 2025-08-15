@@ -93,5 +93,10 @@
     .pricing-card {
         box-shadow: none;
         border: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    .price p {
+        font-size: 18px;
     }
 }
