@@ -253,6 +253,10 @@ main {
         padding: 0;
     }
 
+    .custom-footer .container .row {
+        margin: 0;
+    }
+
     .footer-right {
         justify-content: center;
     }
