@@ -48,6 +48,10 @@
     text-decoration: underline;
 }
 
+textarea.form-control {
+    height: unset;
+}
+
 @media (max-width: 991px) {
     .form-card {
         margin: 20px 0;

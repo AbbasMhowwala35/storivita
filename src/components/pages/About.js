@@ -12,7 +12,7 @@ const AboutUs = () => {
         <div className="about-page">
             <Container>
                 {/* Who We Are */}
-                <Row className="align-items-center about-us-section">
+                <Row className="align-items-center">
                     <Col xs={12} md={6} className="order-1 order-md-2">
                         <img
                             src={a1}
@@ -71,7 +71,7 @@ const AboutUs = () => {
                         />
                     </Col>
                     <Col xs={12} md={6} className="order-2 order-md-1">
-                        <h4>🛤️ <b> Our Vision – The Road Ahead</b></h4>
+                        <h4 className='extra-margin'>🛤️ <b> Our Vision – The Road Ahead</b></h4>
                         <p>
                             Storivita has begun its journey by supporting local and regional businesses — empowering them to establish a strong digital presence and connect with nearby customers.
                         </p>
@@ -100,7 +100,7 @@ const AboutUs = () => {
                         />
                     </Col>
                     <Col md={6}>
-                        <h4>📍 <b>Our Journey So Far</b></h4>
+                        <h4 className='extra-margin'>📍 <b>Our Journey So Far</b></h4>
                         <p>Storivita is built on the belief that every business — no matter how small — deserves a powerful digital presence. Here’s a look at how our journey has unfolded and where we’re headed next:</p>
                         <Table responsive className='milestone-table'>
                             <thead>
@@ -129,7 +129,7 @@ const AboutUs = () => {
                 </Row>
                 {/* Why Choose */}
                 <Row className="align-items-center about-us-section">
-                    <Col xs={12} md={6} className="order-1 order-md-2 ">
+                    <Col xs={12} md={6} className="order-1 order-md-2 text-center">
                         <img
                             src={a5}
                             alt="App Preview"
@@ -137,7 +137,7 @@ const AboutUs = () => {
                         />
                     </Col>
                     <Col xs={12} md={6} className="order-2 order-md-1">
-                        <h4>💡 <b>Why Choose Storivita?</b></h4>
+                        <h4 className='extra-margin'>💡 <b>Why Choose Storivita?</b></h4>
                         <Table responsive className='milestone-table'>
                             <thead>
                                 <tr>
@@ -171,7 +171,7 @@ const AboutUs = () => {
                     </Col>
                 </Row>
                 {/* Call to Action */}
-                <Row className="text-center build-box">
+                <Row className="text-center build-box extra-margin">
                     <Col>
                         <h3>❤️ ️Let’s Build Back Stronger—Together</h3>
                         {/* <p>No commissions. No complex tech. Just you, your business, and your growth.</p>

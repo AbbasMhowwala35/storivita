@@ -217,12 +217,11 @@ const ContactUs = () => {
                                     value={form.message}
                                     onChange={handleChange}
                                     as="textarea"
-                                    rows={4}
+                                    rows={8}
                                     className={`${errors.message ? "is-invalid" : ""}`}
                                     placeholder="Write Here Your Message"
                                 />
                                 {errors.message && <div className="text-danger mb-2">{errors.message}</div>}
-
                                 <button type="submit" className="w-100 mt-3 btn-red">
                                     SEND
                                 </button>

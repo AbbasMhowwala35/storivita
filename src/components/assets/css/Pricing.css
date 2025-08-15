@@ -83,6 +83,7 @@
         overflow-y: scroll;
         flex-wrap: unset;
     }
+
     .tab-content .row {
         display: flex;
         align-items: center;
