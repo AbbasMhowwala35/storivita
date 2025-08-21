@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -15,11 +16,11 @@ const Footer = () => {
           <Col md={12} xs={12}>
             <h5><b>About Us</b></h5>
             <ul className='footer-links'>
-              <li><a href="/about">Our Company</a></li>
-              <li><a href="/contact">Contact Us</a></li>
-              <li><a href="/pricing">Pricing</a></li>
-              <li><a href="/help-page">Help</a></li>
-              <li><a href="/contact">Feedback</a></li>
+              <li><Link to="/about">Our Company</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/pricing">Pricing</Link></li>
+              <li><Link to="/help-page">Help</Link></li>
+              <li><Link to="/contact">Feedback</Link></li>
             </ul>
 
             <br />
