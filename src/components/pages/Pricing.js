@@ -78,7 +78,7 @@ export default function Pricing() {
                                                         <span>Quarterly [+18 tax]</span>
                                                     </div>
                                                     <div className='price'>
-                                                        <p>₹ <b>1699.00</b></p>
+                                                        <p>₹ <b>1299.00</b></p>
                                                     </div>
                                                 </div>
                                             </Col>
@@ -89,7 +89,7 @@ export default function Pricing() {
                                                         <span>Yearly [+18 tax]</span>
                                                     </div>
                                                     <div className='price'>
-                                                        <p>₹ <b>4999.00</b></p>
+                                                        <p>₹ <b>4699.00</b></p>
                                                     </div>
                                                 </div>
                                             </Col>
@@ -112,7 +112,7 @@ export default function Pricing() {
                                                         <span>Monthly [+18 tax]</span>
                                                     </div>
                                                     <div className='price'>
-                                                        <p>₹ <b>1599.00</b></p>
+                                                        <p>₹ <b>1199.00</b></p>
                                                     </div>
                                                 </div>
                                             </Col>
@@ -123,7 +123,7 @@ export default function Pricing() {
                                                         <span>Quarterly [+18 tax]</span>
                                                     </div>
                                                     <div className='price'>
-                                                        <p>₹ <b>5999.00</b></p>
+                                                        <p>₹ <b>2999.00</b></p>
                                                     </div>
                                                 </div>
                                             </Col>
@@ -134,7 +134,7 @@ export default function Pricing() {
                                                         <span>Yearly [+18 tax]</span>
                                                     </div>
                                                     <div className='price'>
-                                                        <p>₹ <b>16999.00</b></p>
+                                                        <p>₹ <b>9999.00</b></p>
                                                     </div>
                                                 </div>
                                             </Col>
