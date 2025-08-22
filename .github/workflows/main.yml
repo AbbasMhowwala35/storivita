@@ -23,12 +23,12 @@ jobs:
 
       - name: Deploy to Server
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
-            cd /var/www/storivita.com && \
-            git pull origin main && \
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+            cd /var/www/storivita.com
+            git pull origin main
             # Uncomment what applies for your stack:
             # composer install --no-dev --optimize-autoloader
             # npm install --production && npm run build
             # systemctl restart apache2
             # pm2 restart all
-          "
+          EOF
