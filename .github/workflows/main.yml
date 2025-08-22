@@ -25,10 +25,16 @@ jobs:
       - name: Deploy to Server
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
-            rm -rf /var/www/storivita.com
+            cd /var/www/storivita.com
+            # Remove everything inside but keep the folder
+            rm -rf ./* .[^.] .??*
+            
+            # Fresh clone
             git clone git@github.com:AbbasMhowwala35/storivita.git /var/www/storivita.com
+            
             cd /var/www/storivita.com
             npm install --production
             npm run build
             pm2 restart all
           EOF
+
