@@ -25,16 +25,25 @@ jobs:
       - name: Deploy to Server
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+            set -e
+            # Ensure parent directory exists
+            mkdir -p /var/www
+      
+            # If directory exists, wipe it, otherwise fresh clone
+            if [ -d "/var/www/storivita.com" ]; then
+              rm -rf /var/www/storivita.com
+            fi
+      
+            # Clone using HTTPS instead of SSH (avoids host key + private key issues)
+            git clone https://github.com/AbbasMhowwala35/storivita.git /var/www/storivita.com
+      
             cd /var/www/storivita.com
-            # Remove everything inside but keep the folder
-            rm -rf ./* .[^.] .??*
-            
-            # Fresh clone
-            git clone git@github.com:AbbasMhowwala35/storivita.git /var/www/storivita.com
-            
-            cd /var/www/storivita.com
+      
+            # Install & build
             npm install --production
             npm run build
-            pm2 restart all
+      
+            # Restart pm2 (ignore if no apps yet)
+            pm2 restart all || true
           EOF
 
