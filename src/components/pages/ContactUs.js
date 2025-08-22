@@ -113,6 +113,8 @@ const ContactUs = () => {
             .catch((err) => console.error(err));
     };
 
+    // console.log(form)
+
     return (
         <div className="contact-page">
             <Container className="text-center">
