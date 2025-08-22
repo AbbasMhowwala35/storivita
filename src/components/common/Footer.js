@@ -52,7 +52,7 @@ const Footer = () => {
           </Col>
           <Col xs={12} md={6} className="footer-right text-center text-md-end">
             <p>
-              <a href="/terms-and-conditions"><span>Legal •</span> Privacy Security</a>
+              <Link to="/terms-and-conditions"><span>Legal •</span> Privacy Security</Link>
             </p>
           </Col>
         </Row>
