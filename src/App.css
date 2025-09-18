@@ -178,7 +178,7 @@ main {
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 20px;
-    max-width: 750px;
+    max-width: 650px;
     padding: 20px;
     margin-top: -200px !important;
     margin: 0 auto;
@@ -188,6 +188,12 @@ main {
     color: #F5564E;
     font-weight: 600;
     margin-bottom: 15px;
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active, .btn:hover {
+    color: #fff;
+    background-color: #F5564E;
+    border-color: #F5564E;
 }
 
 @media (max-width: 991px) {
@@ -201,7 +207,7 @@ main {
     }
 
     main {
-        padding-top: 100px;
+        padding-top: 70px;
         padding-bottom: 0;
     }
 
@@ -268,5 +274,11 @@ main {
     
     .footer-left p {
         margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .build-box-content {
+        max-width: 350px;
     }
 }

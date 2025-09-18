@@ -119,12 +119,14 @@ const AboutUs = () => {
                                     <td>2026</td>
                                 </tr>
                                 <tr>
-                                    <td> <b>🌐 Sector Expansion — </b>Storivita scales into 15+ new business verticals including Beauty, Education, Electronics, and more — setting the stage for a wider impact. <br /> <br />
-                                        This is just the start. With each milestone, we’re getting closer to building a truly universal platform that empowers businesses to thrive — locally, regionally, and globally.</td>
+                                    <td> <b>🌐 Sector Expansion — </b>Storivita scales into 15+ new business verticals including Beauty, Education, Electronics, and more — setting the stage for a wider impact. </td>
                                     <td>2027</td>
                                 </tr>
                             </tbody>
                         </Table>
+                    </Col>
+                    <Col>
+                        <p style={{ textAlign: "justify"}}>This is just the start. With each milestone, we’re getting closer to building a truly universal platform that empowers businesses to thrive — locally, regionally, and globally. </p>
                     </Col>
                 </Row>
                 {/* Why Choose */}

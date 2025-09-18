@@ -11,6 +11,7 @@ import gplay from '../assets/images/google-play.svg'
 import apple from '../assets/images/apple.svg'
 const Home = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const playStoreLink = "https://play.google.com/store/apps/details?id=com.store.storivita"
 
     const steps = [
         {
@@ -34,6 +35,10 @@ const Home = () => {
             text: "Registered users on Storivita can easily explore verified local businesses in their area. They can browse offerings, contact businesses, or make purchases both online & offline - helping you expand your reach without extra marketing efforts.",
         },
     ];
+
+    const handleDownloadClick = () => {
+        window.open(playStoreLink, "_blank", "noopener,noreferrer")
+    }
 
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -64,8 +69,8 @@ const Home = () => {
                         </p>
                         <div className="hero-buttons">
                             <div className="d-flex gap-3 align-items-center">
-                                <Button className="theme-primary-filled">Download Now</Button>
-                                <Button className="play-store-button">
+                                <Button onClick={handleDownloadClick} className="theme-primary-filled">Download Now</Button>
+                                <Button onClick={handleDownloadClick} className="play-store-button">
                                     <img src={gplay} className="gplay" alt="Google Play" />
                                 </Button>
                             </div>

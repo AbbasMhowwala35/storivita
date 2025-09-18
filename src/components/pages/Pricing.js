@@ -9,7 +9,12 @@ import gplay from '../assets/images/google-play.svg'
 import '../assets/css/Pricing.css';
 
 export default function Pricing() {
+    const playStoreLink = "https://play.google.com/store/apps/details?id=com.store.storivita"
 
+    const handleDownloadClick = () => {
+        window.open(playStoreLink, "_blank", "noopener,noreferrer")
+    }
+    
     const [activeKey, setActiveKey] = useState('city');
     return (
         <>
@@ -166,8 +171,8 @@ export default function Pricing() {
                         <h3>Download the app and get started!</h3>
                         <div className="buttons mt-3">
                             <div className='d-flex justify-content-center gap-3 align-items-center'>
-                                <Button className="theme-primary-filled">Download Now</Button>
-                                <Button className="play-store-button">
+                                <Button onClick={handleDownloadClick} className="theme-primary-filled">Download Now</Button>
+                                <Button onClick={handleDownloadClick} className="play-store-button">
                                     <img src={gplay} className='gplay' />
                                 </Button>
                             </div>
