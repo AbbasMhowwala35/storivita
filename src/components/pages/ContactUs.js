@@ -3,6 +3,7 @@ import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import emailjs from "emailjs-com";
 import '../assets/css/ContactUs.css';
 import Download from '../common/Download';
+import axios from 'axios';
 
 const ContactUs = () => {
     const [form, setForm] = useState({
@@ -11,6 +12,10 @@ const ContactUs = () => {
         email: "",
         mobile: "",
         message: ""
+    });
+    const [formData, setFormData] = useState({
+        email: "",
+        feedback: "",
     });
     const [errors, setErrors] = useState({});
     const [error, setError] = useState("");
@@ -35,18 +40,36 @@ const ContactUs = () => {
         });
     }
 
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({ ...prev, [name]: value }));
+        setError((prevErrors) => {
+            const newErrors = { ...prevErrors };
+
+            if (name === "email") {
+                if (!value.trim()) {
+                    newErrors.email = "Email is required.";
+                } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                    newErrors.email = "Please enter a valid email address.";
+                } else {
+                    delete newErrors.email;
+                }
+            }
+            if (name === "feedback") {
+                if (!value.trim()) {
+                    newErrors.feedback = "Please enter your feedback.";
+                } else {
+                    delete newErrors.feedback;
+                }
+            }
+            return newErrors;
+        });
+    };
+
     const handleFeedbackChange = (e) => {
         setFeedback(e.target.value);
         if (error) setError("");
     }
-
-    const validateFeedbackForm = () => {
-        if (!feedback.trim()) {
-            setError("Please enter your feedback.");
-            return false;
-        }
-        return true;
-    };
 
     const validateForm = () => {
         let newErrors = {};
@@ -91,29 +114,44 @@ const ContactUs = () => {
             .catch((err) => console.error(err));
     };
 
-    const sendFeedback = (e) => {
-        e.preventDefault();
-        if (!validateFeedbackForm()) return;
-        if (!feedback.trim()) {
-            setError("Please write your feedback before sending.");
-            return;
+    const validateFeedbackForm = () => {
+        const newErrors = {};
+        if (!formData.email.trim()) {
+            newErrors.email = "Email is required.";
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+            newErrors.email = "Please enter a valid email address.";
         }
-        emailjs
-            .send(
-                "service_2jfcon2",
-                "template_dnp2tv2",
-                { feedback },
-                "mEBZ00b_Q6xHgGRV5"
-            )
-            .then(() => {
-                alert("Feedback sent!");
-                setFeedback("");
-                setError("");
-            })
-            .catch((err) => console.error(err));
+        if (!formData.feedback.trim()) {
+            newErrors.feedback = "Please enter your feedback.";
+        }
+        setError(newErrors);
+        return Object.keys(newErrors).length === 0;
     };
 
-    // console.log(form)
+    const sendFeedback = async (e) => {
+        e.preventDefault();
+        if (!validateFeedbackForm()) return;
+        setIsSending(true);
+        try {
+            const response = await axios.post(
+                "https://backend.storivita.com/api/feedback/website",
+                {
+                    email: formData.email,
+                    description: formData.feedback,
+                }
+            );
+            if (response.status === 200) {
+                alert("Thank you for your feedback!");
+                setFormData({ email: "", feedback: "" });
+                setError({});
+            }
+        } catch (err) {
+            console.error(err);
+            alert("Something went wrong while sending feedback. Please try again.");
+        } finally {
+            setIsSending(false);
+        }
+    };
 
     return (
         <div className="contact-page">
@@ -240,15 +278,27 @@ const ContactUs = () => {
                         <Card.Body>
                             <Form onSubmit={sendFeedback}>
                                 <Form.Control
+                                    type="email"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    value={formData.email}
+                                    onChange={handleInputChange}
+                                    isInvalid={!!error.email}
+                                />
+                                <Form.Control.Feedback type="invalid" className='mb-3'>
+                                    {error.email}
+                                </Form.Control.Feedback>
+                                <Form.Control
                                     as="textarea"
                                     rows={4}
+                                    name="feedback"
                                     placeholder="Write Feedback Here..."
-                                    value={feedback}
-                                    onChange={handleFeedbackChange}
-                                    isInvalid={!!error}
+                                    value={formData.feedback}
+                                    onChange={handleInputChange}
+                                    isInvalid={!!error.feedback}
                                 />
-                                <Form.Control.Feedback type="invalid">
-                                    {error}
+                                <Form.Control.Feedback type="invalid" className='mb-3'>
+                                    {error.feedback}
                                 </Form.Control.Feedback>
                                 <button
                                     type="submit"

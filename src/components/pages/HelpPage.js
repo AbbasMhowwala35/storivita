@@ -1,7 +1,7 @@
-import React from "react";
 import help from '../assets/images/help.svg'
 import "../assets/css/HelpPage.css";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const HelpPage = () => {
 
@@ -100,7 +100,9 @@ const HelpPage = () => {
                         <p className="hero-text mb-3">
                             Here you’ll find answers to common questions about using our platform, managing your business profile, and getting the most out of Storivita.
                         </p>
-                        <Button className="theme-primary-filled">Chat With Us</Button>
+                        <Link to="/contact">
+                            <Button className="theme-primary-filled">Chat With Us</Button>
+                        </Link>
                     </Col>
                 </Row>
             </Container>
