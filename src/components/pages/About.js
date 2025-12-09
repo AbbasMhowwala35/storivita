@@ -50,7 +50,7 @@ const AboutUs = () => {
                     </Col>
                     <Col md={6}>
                         <h4>🚀 <b>Current Focus</b></h4>
-                        <p>Storivita is currently focused on serving two core sectors that form the foundation of our platform::</p>
+                        <p>Storivita is currently focused on serving two core sectors that form the foundation of our platform:</p>
                         <ol>
                             <li><b>Grocery & Household Stores 🛒</b></li>
                             <li><b>Restaurants & Food Services 🍽</b></li>

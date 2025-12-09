@@ -262,7 +262,7 @@ const ContactUs = () => {
                                     placeholder="Write Here Your Message"
                                 />
                                 {errors.message && <div className="text-danger mb-2">{errors.message}</div>}
-                                <button type="submit" className="w-100 mt-3 btn-red">
+                                <button type="submit" className="w-100 mt-3 btn-red" disabled>
                                     SEND
                                 </button>
                             </Form>

@@ -6,7 +6,7 @@
     margin-bottom: 50px;
 }
 
-.contact-bg-section h4{
+.contact-bg-section h4 {
     font-weight: 700;
 }
 
@@ -53,6 +53,14 @@
     padding: 10px;
     font-weight: 600;
     border-radius: 5px;
+}
+
+.btn-red:disabled {
+    background-color: #ccc !important;
+    color: #666 !important;
+    cursor: not-allowed;
+    opacity: 0.6;
+    border: none;
 }
 
 .btn-red:hover {
